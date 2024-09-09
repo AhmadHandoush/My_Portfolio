@@ -7,7 +7,7 @@ function Projects() {
     {
       id: 1,
       name: "Trekker Tales",
-      image: "../../../public/trekker-tales.jpeg",
+      image: "./trekker-tales.jpeg",
       description:
         "Mobile App aims to help students get the perefect weekend with their teachers.",
       stacks: [
@@ -23,7 +23,7 @@ function Projects() {
     {
       id: 2,
       name: "HND",
-      image: "../../../public/HND.png",
+      image: "./HND.png",
       description:
         "Full Stack E-commerce Website aims to help people shop online instead of going to the shop.",
       stacks: ["React Js", "Node js", "Express", "MangoDB"],
@@ -32,7 +32,7 @@ function Projects() {
     {
       id: 3,
       name: "Subway-system",
-      image: "../../../public/Subway.png",
+      image: "./Subway.png",
       description:
         "Full Stack Website for a Subway System aims to help passenger to book a seat online.",
       stacks: ["React Js", "Laravel", "MySQL"],
