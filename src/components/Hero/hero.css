@@ -1,0 +1,55 @@
+.hero {
+  height: 80vh;
+  overflow: hidden;
+}
+.hero h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero h3 {
+  text-transform: capitalize;
+  text-align: center;
+}
+.stars,
+.stars-right {
+  width: 5px; /* Size of stars */
+  height: 5px; /* Size of stars */
+  background: linear-gradient(white, #ffd700);
+  position: absolute;
+  z-index: 0;
+  animation: animStars 50s linear infinite;
+}
+
+.stars {
+  box-shadow: 100px 200px white, 150px 250px #ffd700, 200px 300px white,
+    250px 350px #ffd700, 300px 400px white, 350px 450px #ffd700,
+    400px 500px white, 450px 550px #ffd700, 500px 600px white,
+    550px 650px #ffd700; /* Adjusted positions */
+  top: 0;
+  left: 0;
+}
+
+.stars-right {
+  box-shadow: 600px 200px white, 650px 250px #ffd700, 700px 300px white,
+    750px 350px #ffd700, 800px 400px white, 850px 450px #ffd700,
+    900px 500px white, 950px 550px #ffd700, 1000px 600px white,
+    1050px 650px #ffd700; /* Adjusted positions for the right side */
+  top: 0;
+  right: 0;
+}
+
+@keyframes animStars {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-1000px) translateX(-1000px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 60vh;
+  }
+}

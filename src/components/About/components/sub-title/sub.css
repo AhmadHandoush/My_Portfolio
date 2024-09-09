@@ -1,0 +1,18 @@
+.sub {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.sub h2 {
+  width: fit-content;
+  position: relative;
+  text-transform: capitalize;
+}
+.sub h2::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #ffd700;
+}

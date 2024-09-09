@@ -1,0 +1,60 @@
+.tech {
+  width: 50%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.tech::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ffd700;
+  box-sizing: border-box;
+  animation: moveBorder 4s linear infinite;
+  pointer-events: none;
+  border-radius: 20px;
+}
+@keyframes moveBorder {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+  25% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  75% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+}
+.tech .skills {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.tech .skills li div {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+  .tech {
+    width: 98%;
+  }
+  .tech .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
