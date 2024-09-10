@@ -1,10 +1,9 @@
 import Header from "../Header";
-
 import "./hero.css";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 
-function Hero() {
-  let text = "Hii! i'm ahmad handoush, full stack web developer.";
+const Hero = forwardRef((props, ref) => {
+  let text = "Hii! I'm Ahmad Handoush, full stack web developer.";
   let Tomorrow = "tomorrow's";
 
   const [displayedText, setDisplayedText] = useState("");
@@ -27,12 +26,12 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero pt-5 relative" id="About">
+    <section className="hero pt-5 relative" id="About" ref={ref}>
       <div className="stars"></div>
       <div className="stars-right"></div>
       <Header />
-      <div className=" info center flex column gap-3 w-9/10 lg:w-5/10 ">
-        <h1 className="text-white text-2xl lg:text-6xl  font-bold ">
+      <div className="info center flex column gap-3 w-9/10 lg:w-5/10">
+        <h1 className="text-white text-2xl lg:text-6xl font-bold">
           Building{" "}
           <span className="text-secondary animated-text">
             {Tomorrow.split("").map((char, index) => (
@@ -51,6 +50,8 @@ function Hero() {
       </div>
     </section>
   );
-}
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;

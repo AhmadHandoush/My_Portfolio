@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./header.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,16 +18,45 @@ function Header() {
     >
       <ul className="flex gap-2 md:gap-5 text-lg">
         <li>
-          <Link to={"#About"}> About</Link>
+          <Link to="About" smooth={true} duration={100} spy={true} exact="true">
+            About
+          </Link>
         </li>
         <li>
-          <Link to={"#skills"}> Skills</Link>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+          >
+            {" "}
+            Skills
+          </Link>
         </li>
         <li>
-          <Link to={"#projects"}> Projects</Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+          >
+            {" "}
+            Projects
+          </Link>
         </li>
         <li>
-          <Link to={"#contact"}> Contact</Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={100}
+            spy={true}
+            exact="true"
+          >
+            {" "}
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

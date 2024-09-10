@@ -1,6 +1,9 @@
 nav {
   border: 1px solid #ffd700;
 }
+nav a {
+  cursor: pointer;
+}
 nav a:hover {
   opacity: 0.9;
   transition: 0.3s;
